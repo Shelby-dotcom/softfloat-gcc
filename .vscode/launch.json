@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug main (Makefile)",
+        "type": "cppdbg",
+        "request": "launch",
+  
+        "program": "${workspaceFolder}/softfloat/build/Linux-386-GCC/main",
+        "args": [],
+  
+        "cwd": "${workspaceFolder}",
+        "stopAtEntry": true,
+        "externalConsole": false,
+  
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb",
+  
+        "setupCommands": [
+          { "description": "Enable pretty-printing for gdb", "text": "-enable-pretty-printing", "ignoreFailures": true },
+          { "description": "Set Disassembly Flavor to Intel", "text": "-gdb-set disassembly-flavor intel", "ignoreFailures": true }
+        ],
+  
+        "preLaunchTask": "Make: main",
+  
+        "environment": []
+      }
+    ]
+  }
+  
+  
+  

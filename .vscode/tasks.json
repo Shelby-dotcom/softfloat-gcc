@@ -1,0 +1,49 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Make: linux386",
+        "type": "shell",
+        "command": "make",
+        "args": ["linux386"],
+        "options": { "cwd": "${workspaceFolder}" },
+        "problemMatcher": ["$gcc"]
+      },
+      {
+        "label": "Make: main",
+        "type": "shell",
+        "command": "make",
+        "args": ["main"],
+        "options": { "cwd": "${workspaceFolder}" },
+        "problemMatcher": ["$gcc"]
+      },
+      {
+        "label": "Make: run_main",
+        "type": "shell",
+        "command": "make",
+        "args": ["run_main"],
+        "options": { "cwd": "${workspaceFolder}" },
+        "problemMatcher": ["$gcc"],
+        "group": { "kind": "build", "isDefault": true }
+      },
+      {
+        "label": "Make: clean",
+        "type": "shell",
+        "command": "make",
+        "args": ["clean"],
+        "options": { "cwd": "${workspaceFolder}" },
+        "problemMatcher": []
+      },
+      {
+        "label": "C/C++: gcc build active file",
+        "type": "cppbuild",
+        "command": "make",
+        "args": ["run_main"],
+        "options": { "cwd": "${workspaceFolder}" },
+        "problemMatcher": ["$gcc"],
+        "group": { "kind": "build", "isDefault": true },
+        "detail": "Runs make run_main (SoftFloat + main) instead of compiling a single file."
+      }
+    ]
+  }
+  
